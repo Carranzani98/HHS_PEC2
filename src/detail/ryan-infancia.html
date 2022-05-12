@@ -12,16 +12,17 @@
     
         <!-- JS -->
         <script src="../app.js"></script>
-
-        <!-- FONTAWESOME DEL PAQUETE-->
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     </head>
 <body>
     <header>
+        <div id="logo">
+            <img src="/img/logo/logo-principal.png" alt="Logo">
+            <h1>Portal biográfico</h1>
+        </div>
         <nav>
             <div id="responsive-bars"><i class="fa-solid fa-bars"></i></div>
             <ul>
-              <li class="responsive-hidden"><a href="../index.html">Ryan Gosling</a></li>
+              <li class="responsive-hidden"><a href="../index.html">Portada</a></li>
               <li class="responsive-hidden"><a href="../presentacion.html">Presentación</a></li>
               <li class="responsive-hidden"><a href="../categorias.html">Categorías</a></li>
               <li class="responsive-hidden"><a href="../enlaces.html">Enlaces</a></li>
@@ -32,7 +33,46 @@
     <article>
         <h1>La infancia de Ryan Gosling</h1>
         <div class="separator"></div>
-        <img src="../../img/vidaPersonal/ryan-gosling-peque.jpeg" alt="Ryan Gosling de pequeño">
+
+        <picture>
+            <source
+            media="(max-width: 767px)"
+            sizes="(max-width: 768px) 40vw, 307px"
+            srcset="
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale190.jpg 190w,
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale307.jpg 307w">
+            <source
+            media="(max-width: 767px)"
+            sizes="(max-width: 768px) 40vw, 307px"
+            srcset="
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale190.webp 190w,
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale307.webp 307w" type="image/webp">
+            <source
+            media="(min-width: 768px) and (max-width: 991px)"
+            sizes="(max-width: 992px) 60vw, 595px"
+            srcset="
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale461.jpg 461w,
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale595.jpg 595w">
+            <source
+            media="(min-width: 768px) and (max-width: 991px)"
+            sizes="(max-width: 992px) 60vw, 595px"
+            srcset="
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale461.webp 461w,
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale595.webp 595w" type="image/webp">
+            <source
+            media="(min-width: 992px)"
+            sizes="(max-width: 992px) 70vw, 840px"
+            srcset="
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale695.webp 695w,
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale840.webp 840w" type="image/webp">
+            <img
+            sizes="(max-width: 992px) 70vw, 840px"
+            srcset="
+            ../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale840.jpg 840w"
+            src="../../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale840.jpg"
+            alt="Ryan Gosling de pequeño">
+        </picture>
+    
         <section>
             <h2>Contenido</h2>
             <ul>
@@ -61,14 +101,24 @@
             <h3 id="quizasInterese">Quizás te interese...</h3>
             <div class="recommended">
                 <div>
-                    <a href="./ryan-vidaAdulta.html">
-                        <img src="../../img/vidaPersonal/ryan-and-eva.png" alt="Ryan Gosling y Eva Mendes">
+                    <a href="./ryan-musica.html">
+                        <img srcset="
+                        ../../img/extras/RyanPiano-482w.png,
+                        ../../img/extras/RyanPiano-723w.png 1.5x,
+                        ../../img/extras/RyanPiano-964w.png 2x"
+                        src="../../img/extras/RyanPiano-964w.png"
+                        alt="Ryan Gosling tocando el piano, fondo transparente">
                     </a>
-                    <div>Vida adulta</div>
+                    <div>Ryan Gosling en la música</div>
                 </div>
                 <div>
                     <a href="./ryan-lalaland.html">
-                        <img src="../../img/filmografia/lalaland-cine.jpeg" alt="Escena de La la land">
+                        <img srcset="
+                        ../../img/filmografia/RyanGoslingOscats-480w.gif,
+                        ../../img/filmografia/RyanGoslingOscats-720w.gif 1.5x,
+                        ../../img/filmografia/RyanGoslingOscats-960w.gif 2x"
+                        src="../../img/filmografia/RyanGoslingOscats-960w.gif"
+                        alt="Ryan Gosling en los premios Oscars">
                     </a>
                     <div>La La Land</div>
                 </div>
@@ -78,6 +128,15 @@
  </main>
 <footer>
     <div class="info">
+        <img src="/img/logo/logo-principal.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Portada</a></li>
+                <li><a href="../presentacion.html">Presentación</a></li>
+                <li><a href="../categorias.html">Categorías</a></li>
+                <li><a href="../enlaces.html">Enlaces </a></li>
+            </ul>
+        </nav>
         <p>contact@biografias.net</p>
     </div>
     <form action="#" method="post">

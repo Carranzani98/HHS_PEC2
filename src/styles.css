@@ -1,3 +1,7 @@
+@import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+@import "../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
@@ -19,9 +23,20 @@ header {
   background-color: var(--main-color);
   padding: 20px;
 }
+
+header #logo{
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+header #logo h1{
+  margin-top: 0;
+}
+
 header ul {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   list-style: none;
   margin: 0;
@@ -39,7 +54,12 @@ header ul li a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
+  transition: all 0.5s ease-out;
 }
+header ul li a:hover{
+  font-size: 24px;
+}
+
 header ul li a:hover,
 header ul li.selected a {
   color: rgb(255, 255, 255);
@@ -49,7 +69,7 @@ header ul li.selected a {
 main .img-container {
   background-image: url('../img/portada-Ryan.jpeg');
   background-position: center top;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   min-width: 360px;
@@ -69,6 +89,45 @@ main .img-container h1 {
 }
 main .img-container p {
   font-size: 50px;
+}
+
+main div.discover{
+  display: flex;
+  justify-content: center;
+  margin: 35px 0;
+  gap: 15px;
+}
+div.outside{
+  background: black;
+  width: 200px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.inside{
+  background: white;
+  color: red;
+  width: 190px;
+  height: 130px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.alert-new{
+  clip-path: polygon(54% 2%, 44% 8%, 31% 3%, 26% 15%, 13% 14%, 15% 26%, 3% 31%, 9% 43%, 2% 55%, 14% 61%, 9% 72%, 23% 74%, 23% 88%, 35% 81%, 38% 95%, 48% 86%, 60% 94%, 65% 80%, 77% 86%, 80% 72%, 93% 70%, 89% 58%, 100% 52%, 91% 44%, 99% 35%, 90% 29%, 91% 17%, 79% 15%, 78% 4%, 66% 10% );
+}
+
+main .clip-path1{
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+main .clip-path2{
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
 }
 
 section.section-carousel h2{
@@ -110,7 +169,7 @@ main .presentation .img img{
   object-fit: contain;
   object-position: top;
   top: 0;
-  max-width: 512px;
+  width: 420px;
   margin: 0 auto;
 }
 
@@ -126,6 +185,47 @@ main .presentation .bottom-images{
 main .presentation .bottom-images img{
   width: 30%;
   object-fit: contain;
+}
+
+.stars{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/*CÓDIGO DE LA ANIMACIÓN*/
+@keyframes move {
+  from
+    {transform: rotate(0deg)}
+  to
+    {transform: rotate(360deg)}
+}
+
+@keyframes shine-star {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.star{
+  animation: move 10s linear infinite;
+}
+
+.animation{
+  animation: shine-star 4s ease-out 1s;
+}
+.animation1{
+  animation: shine-star 4s ease-out 5s;
+}
+.animation2{
+  animation: shine-star 4s ease-out 9s;
+}
+.animation3{
+  animation: shine-star 4s ease-out 13s;
+}
+.animation4{
+  animation: shine-star 4s ease-out 17s;
 }
 
 /* CATEGORY - MAIN */
@@ -173,15 +273,12 @@ main .category-container section {
   display: flex;
   background-color: white;
   margin-bottom: 20px;
-  max-height: 200px;
+  max-height: 250px;
 }
 main .category-container ul {
   line-height: 30px;
 }
-main .category-container section img {
-  width: 200px;
-  height: 200px;
-}
+
 main .category-container section > div {
   display: flex;
   width: 100%;
@@ -248,16 +345,13 @@ main article .separator{
   height: 2px;
   background-color: rgb(133, 196, 184);
 }
-main article > img{
-  display: block;
-  width: 100%;
-  max-width: 600px;
+main article > picture{
+  display: flex;
+  justify-content: center;
   margin: 20px auto;
 }
 
-main img#detail-img{
-  width: 40%;
-}
+
 main article section ul li, ol li{
   margin-bottom: 10px;
 }
@@ -267,10 +361,16 @@ main article section dl dt{
   text-decoration: underline;
 }
 
-main a{
+main ul li a{
   text-decoration: none;
   color: rgb(70, 128, 119);
+  transition: all 0.5s ease-out;
 }
+
+main ul li a:hover{
+  font-size: 20px;
+}
+
 main article section .recommended{
   display: flex;
   gap: 20px;
@@ -326,6 +426,11 @@ footer .info {
   font-style: italic;
   background-color: rgb(143, 194, 199);
 }
+
+footer .info .selected{
+  text-decoration: underline;
+}
+
 footer #cbox a {
   color: rgb(32, 106, 114);
 }
@@ -355,7 +460,7 @@ footer nav a {
   color: rgb(32, 106, 114);
 }
 footer a:hover {
-  color: rgb(143, 194, 199);
+  color: rgb(19, 73, 80)
 }
 
 #email {
@@ -436,7 +541,7 @@ form a {
     flex-direction: column;
     max-height: unset;
   }
-  main .category-container section img {
+  main .category-container section img, main .category-container section picture {
     margin: 0 auto;
   }
 }
@@ -445,7 +550,7 @@ form a {
     flex-direction: column;
   }
   main .presentation .img img {
-    width: 100%;
+    width: 420px;
     margin-bottom: 15px;
     padding: 0 10px;
     box-sizing: border-box;
@@ -545,5 +650,9 @@ form a {
   footer nav ul {
     flex-direction: column;
     gap: 10px;
+  }
+
+  main .presentation .img img{
+    width:  320px;
   }
 }

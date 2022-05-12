@@ -13,15 +13,17 @@
         <!-- JS -->
         <script src="../app.js"></script>
 
-        <!-- FONTAWESOME DEL PAQUETE-->
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     </head>
 <body>
     <header>
+        <div id="logo">
+            <img src="/img/logo/logo-principal.png" alt="Logo">
+            <h1>Portal biográfico</h1>
+        </div>
         <nav>
             <div id="responsive-bars"><i class="fa-solid fa-bars"></i></div>
             <ul>
-              <li class="responsive-hidden"><a href="../index.html">Ryan Gosling</a></li>
+              <li class="responsive-hidden"><a href="../index.html">Portada</a></li>
               <li class="responsive-hidden"><a href="../presentacion.html">Presentación</a></li>
               <li class="responsive-hidden"><a href="../categorias.html">Categorías</a></li>
               <li class="responsive-hidden"><a href="../enlaces.html">Enlaces</a></li>
@@ -32,7 +34,27 @@
     <article>
         <h1>El diario de Noah</h1>
         <div class="separator"></div>
-        <img src="../../img/filmografia/eldiario.jpeg" alt="Ryan Gosling y Rachel McAdams en una escena del Diario de Noah">
+        <picture>
+            <source
+            media="(max-width: 767px)"
+            sizes="(max-width: 768px) 40vw, 307px"
+            srcset="
+            ../../img/filmografia/responsive/eldiarioscale200.jpg 200w,
+            ../../img/filmografia/responsive/eldiarioscale307.jpg 307w">
+            <source
+            media="(min-width: 768px) and (max-width: 991px)"
+            sizes="(max-width: 992px) 60vw, 595px"
+            srcset="
+            ../../img/filmografia/responsive/eldiarioscale461.jpg 461w,
+            ../../img/filmografia/responsive/eldiarioscale595.jpg 595w">
+            <img
+            sizes="(max-width: 992px) 70vw, 891px"
+            srcset="
+            ../../img/filmografia/responsive/eldiarioscale695.jpg 695w,
+            ../../img/filmografia/responsive/eldiarioscale891.jpg 891w"
+            src="../../img/filmografia/responsive/eldiarioscale891.jpg"
+            alt="Ryan Gosling y Rachel McAdams en una escena del Diario de Noah">
+            </picture>
         <section>
             <h2>Contenido</h2>
             <ul>
@@ -79,13 +101,13 @@
             <div class="recommended">
                 <div>
                     <a href="./ryan-television.html">
-                        <img src="../../img/extras/ryan-gosling-hercules-tortuga.jpeg" alt="Ryan Gosling en el Joven Hércules">
+                        <img src="../../img/extras/youngHercules.gif" alt="Ryan Gosling en el Joven Hércules">
                     </a>
                     <div>Ryan Gosling en la televisión</div>
                 </div>
                 <div>
                     <a href="./ryan-lalaland.html">
-                        <img src="../../img/filmografia/lalaland-cine.jpeg" alt="Escena de La La Land ">
+                        <img src="../../img/filmografia/la la landefecto.png" alt="Escena de La La Land ">
                     </a>
                     <div>La La Land</div>
                 </div>
@@ -95,6 +117,15 @@
  </main>
 <footer>
     <div class="info">
+        <img src="/img/logo/logo-principal.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Portada</a></li>
+                <li><a href="../presentacion.html">Presentación</a></li>
+                <li><a href="../categorias.html">Categorías</a></li>
+                <li><a href="../enlaces.html">Enlaces </a></li>
+            </ul>
+        </nav>
         <p>contact@biografias.net</p>
     </div>
     <form action="#" method="post">

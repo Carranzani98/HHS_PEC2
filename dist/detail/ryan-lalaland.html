@@ -12,16 +12,17 @@
     
         <!-- JS -->
         <script src="/index.816e7b21.js"></script>
-
-        <!-- FONTAWESOME DEL PAQUETE-->
-    <link rel="stylesheet" href="/index.adb8ce9b.css">
     </head>
 <body>
     <header>
+        <div id="logo">
+            <img src="/logo-principal.a504be3e.png" alt="Logo">
+            <h1>Portal biográfico</h1>
+        </div>
         <nav>
             <div id="responsive-bars"><i class="fa-solid fa-bars"></i></div>
             <ul>
-              <li class="responsive-hidden"><a href="/index.html">Ryan Gosling</a></li>
+              <li class="responsive-hidden"><a href="/index.html">Portada</a></li>
               <li class="responsive-hidden"><a href="/presentacion.html">Presentación</a></li>
               <li class="responsive-hidden"><a href="/categorias.html">Categorías</a></li>
               <li class="responsive-hidden"><a href="/enlaces.html">Enlaces</a></li>
@@ -32,7 +33,14 @@
     <article>
         <h1>La La Land</h1>
         <div class="separator"></div>
-        <img src="/lalaland-cine.934d2cb6.jpeg" alt="Ryan Gosling y Emma Stone en una escena de La La Land">
+        <picture>
+            <source media="(max-width: 767px)" sizes="(max-width: 768px) 40vw, 307px" srcset="/lalalandscale200.cf9a62c1.webp 200w,/lalalandscale307.213c5f70.webp 307w" type="image/webp">
+            <source media="(max-width: 767px)" sizes="(max-width: 768px) 40vw, 307px" srcset="/lalalandscale200.4b7a8474.jpeg 200w,/lalalandscale307.5157aa75.jpeg 307w">
+            <source media="(min-width: 768px) and (max-width: 991px)" sizes="(max-width: 992px) 60vw, 595px" srcset="/lalalandscale461.70cc57af.webp 461w,/lalalandscale595.2f8eaa95.webp 595w" type="image/webp">
+            <source media="(min-width: 768px) and (max-width: 991px)" sizes="(max-width: 992px) 60vw, 595px" srcset="/lalalandscale461.b3f09fef.jpeg 461w,/lalalandscale595.3c9afce9.jpeg 595w">
+            <source media="(min-width: 992px) " sizes="(max-width: 992px) 70vw, 840px" srcset="/lalalandscale695.1fc88637.webp 695w,/lalalandscale840.ea6b2019.webp 840w" type="image/webp">
+            <img sizes="(max-width: 992px) 70vw, 840px" src="/lalalandscale840.b48c2a0a.jpeg" alt="Ryan Gosling y Emma Stone en una escena de La La Land bailando">
+            </picture>
         <section>
             <h2>Contenido</h2>
             <ul>
@@ -69,13 +77,13 @@
             <div class="recommended">
                 <div>
                     <a href="/detail/ryan-musica.html">
-                        <img src="/ryan-bajo.cbb86b1e.png" alt="Ryan Gosling tocando el bajo en un escenario">
+                        <img srcset="/RyanPiano-482w.d718c3b0.png,/RyanPiano-723w.2797be1f.png 1.5x,/RyanPiano-964w.2b0f1a78.png 2x" src="/RyanPiano-964w.2b0f1a78.png" alt="Ryan Gosling tocando el piano, fondo transparente">
                     </a>
                     <div>Ryan Gosling en la música</div>
                 </div>
                 <div>
                     <a href="/detail/ryan-noah.html">
-                        <img src="/thenotebook.92bb601e.jpeg" alt="Portada del Diario de Noah">
+                        <img srcset="/diariodenoah.df926685.gif,/diariodenoah-368.ff99ccb6.gif 1.5x,/diariodenoah-490.f069d265.gif 2x" src="/diariodenoah-490.f069d265.gif" alt="Escena del diario de Noah">
                     </a>
                     <div>El diario de Noah</div>
                 </div>
@@ -85,6 +93,15 @@
  </main>
 <footer>
     <div class="info">
+        <img src="/logo-principal.a504be3e.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Portada</a></li>
+                <li><a href="/presentacion.html">Presentación</a></li>
+                <li><a href="/categorias.html">Categorías</a></li>
+                <li><a href="/enlaces.html">Enlaces </a></li>
+            </ul>
+        </nav>
         <p>contact@biografias.net</p>
     </div>
     <form action="#" method="post">

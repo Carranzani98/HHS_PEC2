@@ -12,16 +12,17 @@
     
         <!-- JS -->
         <script src="../app.js"></script>
-
-        <!-- FONTAWESOME DEL PAQUETE-->
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     </head>
 <body>
     <header>
+        <div id="logo">
+            <img src="/img/logo/logo-principal.png" alt="Logo">
+            <h1>Portal biográfico</h1>
+        </div>
         <nav>
             <div id="responsive-bars"><i class="fa-solid fa-bars"></i></div>
             <ul>
-              <li class="responsive-hidden"><a href="../index.html">Ryan Gosling</a></li>
+              <li class="responsive-hidden"><a href="../index.html">Portada</a></li>
               <li class="responsive-hidden"><a href="../presentacion.html">Presentación</a></li>
               <li class="responsive-hidden"><a href="../categorias.html">Categorías</a></li>
               <li class="responsive-hidden"><a href="../enlaces.html">Enlaces</a></li>
@@ -32,7 +33,27 @@
     <article>
         <h1>Ryan Gosling en la televisión</h1>
         <div class="separator"></div>
-        <img src="../../img/extras/ryan-gosling-hercules-tortuga.jpeg" alt="Ryan Gosling en una escena de el Joven Hércules con una tortuga">
+        <picture>
+            <source
+            media="(max-width: 767px)"
+            sizes="(max-width: 768px) 40vw, 307px"
+            srcset="
+            ../../img/extras/responsive/ryan-gosling-hercules-tortugascale200.jpg 200w,
+            ../../img/extras/responsive/ryan-gosling-hercules-tortugascale307.jpg 307w">
+            <source
+            media="(min-width: 768px) and (max-width: 991px)"
+            sizes="(max-width: 943px) 60vw, 566px"
+            srcset="
+            ../../img/extras/responsive/ryan-gosling-hercules-tortugascale461.jpg 461w,
+            ../../img/extras/responsive/ryan-gosling-hercules-tortugascale566.jpg 566w">
+            
+            <img
+            sizes="(max-width: 992px) 70vw, 810px"
+            srcset="
+            ../../img/extras/responsive/ryan-gosling-hercules-tortugascale810.jpg 810w"
+            src="../../img/extras/responsive/ryan-gosling-hercules-tortugascale810.jpg"
+            alt="Escena de el Joven Hércules con una tortuga">
+            </picture>
         <section>
             <h2>Contenido</h2>
             <ul>
@@ -66,13 +87,23 @@
             <div class="recommended">
                 <div>
                     <a href="./ryan-musica.html">
-                        <img src="../../img/extras/ryan-bajo.png" alt="Ryan Gosling tocando el bajo en un escenario">
+                        <img srcset="
+                        ../../img/extras/RyanPiano-482w.png,
+                        ../../img/extras/RyanPiano-723w.png 1.5x,
+                        ../../img/extras/RyanPiano-964w.png 2x"
+                        src="../../img/extras/RyanPiano-964w.png"
+                        alt="Ryan Gosling tocando el piano, fondo transparente">
                     </a>
                     <div>Ryan Gosling y la música</div>
                 </div>
                 <div>
                     <a href="./ryan-noah.html">
-                        <img src="../../img/filmografia/thenotebook.jpeg" alt="Portada del Diario de Noah">
+                        <img srcset="
+                        ../../img/filmografia/diariodenoah.gif,
+                        ../../img/filmografia/diariodenoah-368.gif 1.5x,
+                        ../../img/filmografia/diariodenoah-490.gif 2x"
+                        src="../../img/filmografia/diariodenoah-490.gif"
+                        alt="Escena del diario de Noah">
                     </a>
                     <div>El diario de Noah</div>
                 </div>
@@ -82,6 +113,15 @@
  </main>
 <footer>
     <div class="info">
+        <img src="/img/logo/logo-principal.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Portada</a></li>
+                <li><a href="../presentacion.html">Presentación</a></li>
+                <li><a href="../categorias.html">Categorías</a></li>
+                <li><a href="../enlaces.html">Enlaces </a></li>
+            </ul>
+        </nav>
         <p>contact@biografias.net</p>
     </div>
     <form action="#" method="post">

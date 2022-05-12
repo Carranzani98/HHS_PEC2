@@ -12,17 +12,18 @@
     
         <!-- JS -->
         <script src="./app.js"></script>
-    
-        <!-- FONTAWESOME DEL PAQUETE-->
-        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
       </head>
 
   <body>
     <header>
+      <div id="logo">
+        <img src="/img/logo/logo-principal.png" alt="Logo">
+        <h1>Portal biográfico</h1>
+      </div>
         <nav>
             <div id="responsive-bars"><i class="fa-solid fa-bars"></i></div>
             <ul>
-              <li class="responsive-hidden"><a href="index.html">Ryan Gosling</a></li>
+              <li class="responsive-hidden"><a href="index.html">Portada</a></li>
               <li class="responsive-hidden"><a href="presentacion.html">Presentación</a></li>
               <li class="responsive-hidden selected"><a href="categorias.html">Categorías</a></li>
               <li class="responsive-hidden"><a href="enlaces.html">Enlaces </a></li>
@@ -41,7 +42,14 @@
         <div id="category-personal">
           <h1>Vida personal</h1>
           <section>
-            <img src="../img/vidaPersonal/ryan-peque.png" alt="Ryan Gosling de pequeño">
+            <img
+            sizes="(max-width: 620px) 307px,(max-width: 870px) 461px, 200px"
+            srcset="
+            ../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale190.jpg 200w,
+            ../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale307.jpg 307w,
+            ../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale461.jpg 461w"
+            src="../img/vidaPersonal/responsive/ryan-gosling-peque_jepqx4_c_scale190.jpg"
+            alt="Ryan Gosling de pequeño">
             <div>
               <div class="category-middle">
                 <h2 class="category-name">Infancia</h2>
@@ -63,7 +71,14 @@
             </div>
           </section>
           <section>
-            <img src="../img/vidaPersonal/ryan-and-eva.png" alt="Ryan Gosling con Eva Mendes" />
+            <img
+            sizes="(max-width: 620px) 307px,(max-width: 870px) 461px, 200px"
+            srcset="
+            ../img/vidaPersonal/responsive/ryan-and-eva_scale200.jpg 200w,
+            ../img/vidaPersonal/responsive/ryan-and-eva_scale307.jpg 307w,
+            ../img/vidaPersonal/responsive/ryan-and-eva_scale461.jpg 461w"
+            src="../img/vidaPersonal/responsive/ryan-and-eva_scale200.jpg"
+            alt="Ryan Gosling con Eva Mendes">
             <div>
               <div class="category-middle">
                 <h2 class="category-name">Vida adulta</h2>
@@ -88,7 +103,14 @@
         <div id="category-films" style="display: none">
           <h1>Filmografía</h1>
           <section>
-            <img src="../img/filmografia/lalaland.png" alt="La la land" />
+            <img
+            sizes="(max-width: 620px) 307px,(max-width: 870px) 461px, 200px"
+            srcset="
+            ../img/filmografia/responsive/lalalandscale200.jpg 200w,
+            ../img/filmografia/responsive/lalalandscale307.jpg 307w,
+            ../img/filmografia/responsive/lalalandscale461.jpg 461w"
+            src="../img/filmografia/responsive/lalalandscale200.jpg"
+            alt="Escena de La La Land Ryan Gosling y Emma bailando">
             <div>
               <div class="category-middle">
                 <h2 class="category-name">La La Land</h2>
@@ -110,7 +132,14 @@
             </div>
           </section>
           <section>
-            <img src="../img/filmografia/thenotebook.jpeg" alt="El diario de Noah" />
+            <img
+            sizes="(max-width: 620px) 307px,(max-width: 870px) 461px, 200px"
+            srcset="
+            ../img/filmografia/responsive/eldiarioscale200.jpg 200w,
+            ../img/filmografia/responsive/eldiarioscale307.jpg 307w,
+            ../img/filmografia/responsive/eldiarioscale461.jpg 461w"
+            src="../img/filmografia/responsive/eldiarioscale200.jpg"
+            alt="Escena de El diario de Noah los protagonistas caminando por con un helado">
             <div>
               <div class="category-middle">
                 <h2 class="category-name">El diario de Noah</h2>
@@ -135,7 +164,14 @@
         <div id="category-extras" style="display: none">
           <h1>Música y televisión</h1>
           <section>
-            <img src="../img/extras/ryan-musica.jpeg" alt="Ryan Gosling tocando el bajo" />
+            <img
+            sizes="(max-width: 620px) 307px,(max-width: 870px) 461px, 200px"
+            srcset="
+            ../img/extras/responsive/ryan-bajoscale200.jpg 200w,
+            ../img/extras/responsive/ryan-bajoscale307.jpg 307w,
+            ../img/extras/responsive/ryan-bajoscale461.jpg 461w"
+            src="../img/extras/responsive/ryan-bajoscale200.jpg"
+            alt="Ryan Gosling tocando el bajo en un concierto">
             <div>
               <div class="category-middle">
                 <h2 class="category-name">Música</h2>
@@ -157,7 +193,14 @@
             </div>
           </section>
           <section>
-            <img src="../img/extras/young-hercules.jpeg" alt="Ryan Gosling en la serie 'Young Hercules'" />
+            <img
+            sizes="(max-width: 620px) 307px,(max-width: 870px) 461px, 200px"
+            srcset="
+            ../img/extras/responsive/ryan-gosling-hercules-tortugascale200.jpg 200w,
+            ../img/extras/responsive/ryan-gosling-hercules-tortugascale307.jpg 307w,
+            ../img/extras/responsive/ryan-gosling-hercules-tortugascale461.jpg 461w"
+            src="../img/extras/responsive/ryan-gosling-hercules-tortugascale200.jpg"
+            alt="Ryan Gosling en la serie 'Young Hercules'">
             <div>
               <div class="category-middle">
                 <h2 class="category-name">Televisión</h2>
@@ -183,6 +226,15 @@
     </main>
     <footer>
       <div class="info">
+        <img class='img' src="/img/logo/logo-principal.png" alt="Logo">
+        <nav>
+            <ul>
+            <li><a href="index.html">Portada</a></li>
+            <li><a href="presentacion.html">Presentación</a></li>
+            <li class="selected"><a href="categorias.html">Categorías</a></li>
+            <li><a href="enlaces.html">Enlaces </a></li>
+            </ul>
+        </nav>
         <p>contact@tripdubai.net</p>
       </div>
       <form action="#" method="post">
